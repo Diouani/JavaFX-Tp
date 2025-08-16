@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.tpenset.Controllers.ProductController"
+      spacing="10" alignment="CENTER" stylesheets="@Assets/style.css">
+
+    <Label text="Gestion des Produits" styleClass="title"/>
+
+    <HBox spacing="10">
+        <Label text="Nom:"/>
+        <TextField fx:id="nameField" promptText="Nom du produit"/>
+        <Label text="Prix:"/>
+        <TextField fx:id="priceField" promptText="Prix en dh"/>
+        <Button text="Ajouter" onAction="#handleAddProduct"/>
+    </HBox>
+
+    <ListView fx:id="productList" prefHeight="250" prefWidth="400"/>
+
+</VBox>
